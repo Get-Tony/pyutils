@@ -14,14 +14,10 @@ from pathlib import Path
 class AutoEncodedPath(Path):
     """Path subclass that uses the system encoding by default."""
 
-    local_encoding: str = (
-        sys.getfilesystemencoding() or sys.getdefaultencoding()
-    )
-
     def read_text(self, encoding: str = None, errors: str = None) -> str:
         """Read the file and return the contents as a string."""
         if encoding is None:
-            encoding = self.local_encoding
+            encoding = sys.getfilesystemencoding() or sys.getdefaultencoding()
         return super().read_text(encoding=encoding, errors=errors)
 
     def write_text(
@@ -33,7 +29,7 @@ class AutoEncodedPath(Path):
     ) -> None:
         """Write a string to the file."""
         if encoding is None:
-            encoding = self.local_encoding
+            encoding = sys.getfilesystemencoding() or sys.getdefaultencoding()
         return super().write_text(
             data=data, encoding=encoding, errors=errors, newline=newline
         )
@@ -48,7 +44,7 @@ class AutoEncodedPath(Path):
     ) -> "io.TextIOWrapper":
         """Open the file and return a corresponding file object."""
         if encoding is None:
-            encoding = self.local_encoding
+            encoding = sys.getfilesystemencoding() or sys.getdefaultencoding()
         return super().open(
             mode=mode,
             buffering=buffering,
