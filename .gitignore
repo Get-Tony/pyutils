@@ -1,0 +1,30 @@
+# Python Environments
+**/.env
+**/.venv
+**/env/
+**/venv/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+
+# Temp folders
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/pytest_cache/
+**/.coverage
+**/.coverage.*
+**/.mypy_cache/
+**/mypy_cache/
+
+# C extensions
+**/*.so
+
+# Unwanted paths for the clean_tree.py script
+**/.clean_tree
+
+# Test and Production data
+**/data
+
+# Ansible
+**/inventory
