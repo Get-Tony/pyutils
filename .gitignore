@@ -28,3 +28,6 @@
 
 # Ansible
 **/inventory
+
+# Allow github workflows
+!.github/workflows/*
