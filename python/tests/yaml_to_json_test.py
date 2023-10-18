@@ -3,7 +3,7 @@
 """Tests for the YAML to JSON converter module."""
 # license: MIT
 # author: Anthony Pagan
-# email: get-tony@outlook.com
+# repo: https://github.com/get-tony/pyutils
 
 import json
 import sys

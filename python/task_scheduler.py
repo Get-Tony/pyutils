@@ -4,7 +4,7 @@
 # version: 0.3.2
 # license: MIT
 # author: Anthony Pagan
-# email: get-tony@outlook.com
+# repo: https://github.com/get-tony/pyutils
 
 import sys
 import json
