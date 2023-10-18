@@ -8,7 +8,6 @@
 
 import sys
 import io
-from typing import override
 from pathlib import Path
 
 
@@ -19,14 +18,12 @@ class AutoEncodedPath(Path):
         sys.getfilesystemencoding() or sys.getdefaultencoding()
     )
 
-    @override
     def read_text(self, encoding: str = None, errors: str = None) -> str:
         """Read the file and return the contents as a string."""
         if encoding is None:
             encoding = self.local_encoding
         return super().read_text(encoding=encoding, errors=errors)
 
-    @override
     def write_text(
         self,
         data: str,
@@ -41,7 +38,6 @@ class AutoEncodedPath(Path):
             data=data, encoding=encoding, errors=errors, newline=newline
         )
 
-    @override
     def open(  # pylint: disable=too-many-arguments
         self,
         mode: str = "r",
