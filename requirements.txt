@@ -1,3 +1,5 @@
-pyyaml  # Required for python/json_to_yaml.py, python/yaml_to_json.py
 pytest # Required for tests
 pytest-cov # Required for tests
+pylint # Required for linting
+black # Required for formatting
+pyyaml  # Required for python/json_to_yaml.py, python/yaml_to_json.py
