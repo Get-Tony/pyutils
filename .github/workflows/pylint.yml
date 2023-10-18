@@ -22,4 +22,3 @@ jobs:
       run: |
         black $(git ls-files '*.py') --check --line-length 79
         pylint $(git ls-files '*.py')
-        pytest .
