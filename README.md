@@ -1,6 +1,18 @@
 # Random Python Scripts
 
-This repository is a collection of random Python scripts created with the intention of possibly aiding someone, someday. The scripts are compatible with Python version 3.11.0 or higher.
+This repository is a collection of random Python scripts created with the intention of possibly aiding someone, someday. The scripts are compatible with Python version 3.10.0 or higher.
+
+I hope that these will be of help to you or spark some ideas for your own projects!
+
+## Code Style and Formatting
+
+Code style, formatting and linting are enforced using the checks below on Push events with GitHub Actions. Please run the checks locally before pushing any changes.
+
+```bash
+black $(git ls-files '*.py') --check --line-length 79
+pylint $(git ls-files '*.py')
+pytest .
+```
 
 ## License
 
@@ -10,8 +22,6 @@ All scripts within this repository are licensed under the [MIT License](LICENSE)
 
 Improvement suggestions are very welcome! Feel free to open an issue or submit a pull request if you have any enhancements or fixes.
 
-## Contact
+## Issues
 
-For any questions or discussions, please open an issue or contact me.
-
-I hope that the scripts in this repository will be of help to you or spark some ideas for your own projects!
+For any questions or discussions, please [Create an Issue](https://github.com/Get-Tony/pyutils/issues).
