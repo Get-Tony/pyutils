@@ -4,14 +4,13 @@ This repository is a collection of random Python scripts created with the intent
 
 I hope that these will be of help to you or spark some ideas for your own projects!
 
-## Code Style and Formatting
+## Formatting and Linting
 
-Code style, formatting and linting are enforced using the checks below on Push events with GitHub Actions. Please run the checks locally before pushing any changes.
+Formatting and linting are enforced using the checks below on Push events with GitHub Actions. Please run the checks locally before pushing any changes.
 
 ```bash
 black $(git ls-files '*.py') --check --line-length 79
 pylint $(git ls-files '*.py')
-pytest .
 ```
 
 ## License
